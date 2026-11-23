@@ -1,0 +1,334 @@
+
+.history-container {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f0f2f5;
+    margin-left: 200px;
+}
+
+.history-container h2 {
+    text-align: center;
+    color: #243b55;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #243b55;
+    color: white;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 25px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Filter Section */
+
+.filter-container {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+/* Filter Group */
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: #243b55;
+    font-size: 14px;
+}
+
+.filter-group select {
+    min-width: 180px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    background: white;
+}
+
+/* Reset Button */
+
+.reset-filter-btn {
+    padding: 11px 18px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reset-filter-btn:hover {
+    background: #141e30;
+}
+
+/* Filter Result */
+
+.filter-result {
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .history-container {
+        margin-left: 0;
+        padding: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .history-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 12px;
+    }
+
+    .history-container h2 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .filter-container {
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .reset-filter-btn {
+        width: 100%;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    .table-container th,
+    .table-container td {
+        padding: 11px 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .employee-status {
+        font-size: 11px;
+        padding: 6px 9px;
+        white-space: nowrap;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        margin: 3px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .edit-leave-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .edit-leave-container input,
+    .edit-leave-container select,
+    .edit-leave-container textarea {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .back-btn {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+/* Edit Leave Form */
+
+.edit-leave-container {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.edit-leave-container h3 {
+    color: #243b55;
+    margin-bottom: 20px;
+}
+
+.edit-leave-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-leave-container label {
+    font-weight: bold;
+    color: #243b55;
+}
+
+.edit-leave-container input,
+.edit-leave-container select,
+.edit-leave-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.edit-leave-container textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.edit-leave-container button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #243b55;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.edit-leave-container button:hover {
+    background: #141e30;
+}
+
+.edit-leave-container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Edit Button */
+
+.edit-btn {
+    background: #e0a800;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.edit-btn:hover {
+    background: #c69500;
+}
+
+/* Success Message */
+
+.success-message {
+    color: #28a745;
+    margin: 12px 0;
+    font-weight: bold;
+}
+/* Leave Status - Same as Employee Dashboard */
+
+.employee-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.employee-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.employee-status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.employee-status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}

@@ -1,0 +1,89 @@
+
+.apply-leave-container {
+    min-height: 100vh;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+.required-star {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.apply-leave-card {
+    width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.apply-leave-card h2 {
+    text-align: center;
+    color: #243b55;
+    margin-bottom: 25px;
+}
+
+.apply-leave-card label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+.apply-leave-card input,
+.apply-leave-card select,
+.apply-leave-card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.apply-leave-card textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.apply-leave-card button {
+    width: 100%;
+    padding: 12px;
+    background: #243b55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.apply-leave-card button:hover {
+    background: #141e30;
+}
+
+.apply-leave-card .back-button {
+    background: #6c757d;
+}
+/* Date input placeholder / format color */
+.apply-leave-card input[type="date"] {
+    color: #999;
+}
+
+/* Selected date color */
+.apply-leave-card input[type="date"]:valid {
+    color: #243b55;
+}
+
+.success-message {
+    color: green;
+    margin-top: 15px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 15px;
+}

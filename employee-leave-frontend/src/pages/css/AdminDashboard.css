@@ -1,0 +1,240 @@
+#root {
+    margin: 0;
+}
+
+.admin-dashboard-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0;
+}
+
+.admin-dashboard-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 25px 30px;
+}
+
+
+/* Section Heading */
+
+.admin-dashboard-content .section-title {
+    color: #243b55;
+    font-size: 22px;
+    margin: 30px 0 20px;
+}
+
+/* Statistics Cards */
+
+.admin-dashboard-content .employee-stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.admin-dashboard-content .employee-stat-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid #243b55;
+    transition: transform 0.2s;
+}
+
+.admin-dashboard-content .employee-stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.admin-dashboard-content .employee-stat-card h3 {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.admin-dashboard-content .employee-stat-card h2 {
+    color: #243b55;
+    font-size: 32px;
+}
+
+.admin-dashboard-content .employee-stat-card.pending {
+    border-top-color: #e0a800;
+}
+
+.admin-dashboard-content .employee-stat-card.pending h2 {
+    color: #d69e00;
+}
+
+.admin-dashboard-content .employee-stat-card.approved {
+    border-top-color: #28a745;
+}
+
+.admin-dashboard-content .employee-stat-card.approved h2 {
+    color: #28a745;
+}
+
+.admin-dashboard-content .employee-stat-card.rejected {
+    border-top-color: #dc3545;
+}
+
+.admin-dashboard-content .employee-stat-card.rejected h2 {
+    color: #dc3545;
+}
+
+/* Leave Requests Table */
+
+.admin-dashboard-content .recent-leaves {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.admin-dashboard-content .recent-leaves .section-title {
+    margin-top: 0;
+}
+
+.admin-dashboard-content .recent-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-dashboard-content .recent-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.admin-dashboard-content .recent-table-container th {
+    background: #243b55;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.admin-dashboard-content .recent-table-container td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.admin-dashboard-content .recent-table-container tr:hover {
+    background: #f8f9fc;
+}
+
+/* Status */
+
+.admin-dashboard-content .employee-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.admin-dashboard-content .employee-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.admin-dashboard-content .employee-status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.admin-dashboard-content .employee-status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Action Buttons */
+
+.admin-dashboard-content .admin-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-dashboard-content .approve-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-dashboard-content .reject-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-dashboard-content .approve-btn:hover {
+    background: #218838;
+}
+
+.admin-dashboard-content .reject-btn:hover {
+    background: #c82333;
+}
+
+.admin-dashboard-content .error-message {
+    color: #dc3545;
+    margin: 15px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .admin-dashboard-content .employee-stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+.admin-dashboard-page{
+
+        width: 100%;
+        min-width: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        margin-top: 60px;
+   
+}
+    .admin-dashboard-content {
+        padding: 20px 15px;
+    }
+
+    .admin-dashboard-content > h1 {
+        font-size: 24px;
+    }
+
+    .admin-dashboard-content .employee-stats-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .admin-dashboard-content .employee-stat-card {
+        padding: 18px 10px;
+    }
+
+    .admin-dashboard-content .employee-stat-card h3 {
+        font-size: 13px;
+    }
+
+    .admin-dashboard-content .employee-stat-card h2 {
+        font-size: 26px;
+    }
+
+    .admin-dashboard-content .recent-leaves {
+        padding: 15px;
+    }
+}
